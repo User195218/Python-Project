@@ -22,13 +22,14 @@ coding = input("1 for Coding or 0 for Decoding")
 coding = True if (coding == "1") else False
 
 print(coding)
-
+#Coding Part
 if coding:
     nwords = []
     for word in words:
         if len(word) >= 3:
             s1 = 3
             s2 = 3
+    #Ensures random string generation
             res1 = ''.join(random.choices(string.ascii_letters + string.digits, k=s1))
             res2 = ''.join(random.choices(string.ascii_letters + string.digits, k=s2))
             EncryptedText = res1 + word[1:] + word[0] + res2
@@ -36,7 +37,7 @@ if coding:
         else:
             nwords.append(word[::-1])
     print(" ".join(nwords))
-
+#Decoding Part
 else:
     nwords = []
     for word in words:
